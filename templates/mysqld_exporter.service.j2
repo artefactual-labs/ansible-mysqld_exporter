@@ -30,7 +30,9 @@ ExecStart=/usr/local/bin/mysqld_exporter \
     {% endif %}
     --web.listen-address {{ mysqld_exporter_web_listen_address }}
 
-SyslogIdentifier=mysqld_exporter
+SyslogIdentifier={{ mysqld_exporter_systemd_syslog_identifier }}
+StandardOutput={{ mysqld_exporter_systemd_standard_output }}
+StandardError={{ mysqld_exporter_systemd_standard_error }}
 Restart=always
 RestartSec=5
 

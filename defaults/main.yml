@@ -10,3 +10,8 @@ mysqld_exporter_my_cnf: ""
 mysqld_exporter_collect: []
 
 mysqld_exporter_no_collect: []
+
+# logging variables
+mysqld_exporter_systemd_syslog_identifier: "mysqld_exporter"
+mysqld_exporter_systemd_standard_output: "syslog"
+mysqld_exporter_systemd_standard_error: "syslog"
